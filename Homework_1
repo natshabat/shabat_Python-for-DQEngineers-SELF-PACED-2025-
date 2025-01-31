@@ -1,0 +1,35 @@
+# Import random module for generating random numbers
+import random
+
+# Task 1: Create list of 100 random numbers from 0 to 1000
+# Generate a list of 100 random numbers between 0 and 1000
+random_numbers = [random.randint(0, 1000) for _ in range(100)]
+
+# Task 2: Sort list from min to max (without using sort())
+# Bubble sort algorithm to sort numbers
+for i in range(len(random_numbers)):
+    for j in range(0, len(random_numbers)-i-1):
+        if random_numbers[j] > random_numbers[j+1]:
+            random_numbers[j], random_numbers[j+1] = random_numbers[j+1], random_numbers[j]
+
+# Task 3: Calculate average for even and odd numbers
+# Initialize sum and count variables for even and odd numbers
+even_sum, even_count, odd_sum, odd_count = 0, 0, 0, 0
+
+# Loop through the list, categorize numbers and calculate sums and counts
+for number in random_numbers:
+    if number % 2 == 0:
+        even_sum += number
+        even_count += 1
+    else:
+        odd_sum += number
+        odd_count += 1
+
+# Calculate averages for even and odd numbers
+even_average = even_sum / even_count if even_count else 0
+odd_average = odd_sum / odd_count if odd_count else 0
+
+# Task 4: Print both average results in console
+# Output averages to the console
+print("Average of even numbers:", even_average)
+print("Average of odd numbers:", odd_average)
