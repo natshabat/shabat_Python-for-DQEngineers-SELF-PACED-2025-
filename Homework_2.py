@@ -1,4 +1,4 @@
-Task 1
+#Task 1
 import random  # Import the random module to generate random numbers
 
 # Create an empty list to hold the random dictionaries
@@ -21,7 +21,7 @@ for _ in range(num_dicts):
 # Print the final list of random dictionaries
 print(random_dicts_list)
 
-Task 2
+#Task 2
 # Example of a previously generated list of dictionaries
 random_dicts_list = [
     {'a': 5, 'b': 7},
